@@ -11,7 +11,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: rgb(59, 240, 23);
+  background-color: rgb(0, 0, 0);
 }
 .wrapper {
   width: 370px;
@@ -22,7 +22,13 @@ body {
 .wrapper header {
   font-size: 30px;
   font-weight: 500;
+  height: 40px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
   text-align: center;
+  margin: auto;
+  background: #049475;
 }
 .wrapper form {
   margin: 40px 0 20px 0;
@@ -42,4 +48,48 @@ form input {
   font-size: 18px;
   padding: 0 15px;
   border: 1px solid #999;
+}
+form input:focus {
+  padding: 0 14px;
+  border: 2px solid #049475;
+}
+form .drop-list {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.drop-list .select-box {
+  display: flex;
+  height: 45px;
+  width: 115px;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #999;
+}
+.select-box select {
+  width: auto;
+  font-size: 16px;
+  margin: 0 -5px 0 5px;
+}
+.select-box img {
+  max-width: 25px;
+}
+.drop-list .icon {
+  cursor: pointer;
+  font-size: 22px;
+  margin-top: 30px;
+}
+form .exchange-rate {
+  font-size: 17px;
+  margin: 20px 0 30px;
+}
+form button {
+  height: 52px;
+  color: #fff;
+  font-size: 17px;
+  cursor: pointer;
+  background: #049475;
 }
