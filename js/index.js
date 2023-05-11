@@ -11,7 +11,7 @@ for (let i = 0; i < dropList.length; i++) {
         ? currencyCode == 'USD'
           ? 'selected'
           : ''
-        : currencyCode == 'MYR'
+        : currencyCode == 'MMK'
         ? 'selected'
         : '';
     //creating currency code as a text and value
@@ -24,6 +24,10 @@ for (let i = 0; i < dropList.length; i++) {
   // });
 }
 
+window.addEventListener('onload', () => {
+  getExchangeRate();
+});
+
 getButton.addEventListener('click', (e) => {
   e.preventDefault();
   //preventing form from submitting
@@ -32,13 +36,14 @@ getButton.addEventListener('click', (e) => {
 
 function getExchangeRate() {
   const amount = document.querySelector('.amount input');
+  exchangeRateTxt = document.querySelector('.exchange-rate');
   let amountVal = amount.value;
   //default value is 1 if user don't enter any value or 0
   if (amountVal == '' || amountVal == '0') {
     amount.value = '1';
     amountVal = 1;
   }
-
+  exchangeRateTxt.innerText = 'Getting exchange rate...';
   let url = `https://open.er-api.com/v6/latest/USD${fromCurrency.value}`;
   //fetching api response
   fetch(url)
