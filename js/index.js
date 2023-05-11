@@ -36,7 +36,7 @@ function loadFlag(element) {
   }
 }
 
-window.addEventListener('onload', () => {
+window.addEventListener('load', () => {
   getExchangeRate();
 });
 
@@ -46,9 +46,19 @@ getButton.addEventListener('click', (e) => {
   getExchangeRate();
 });
 
+const exchangeIcon = document.querySelector('.drop-list .icon');
+exchangeIcon.addEventListener('click', () => {
+  let tempCode = fromCurrency.value; //temp currency code of From drop list
+  fromCurrency.value = toCurrency.value; // passing To currency code to From currency Code
+  toCurrency.value = tempCode; // passing temp code to To currency code
+  loadFlag(fromCurrency);
+  loadFlag(toCurrency);
+  getExchangeRate();
+});
+
 function getExchangeRate() {
   const amount = document.querySelector('.amount input');
-  exchangeRateTxt = document.querySelector('.exchange-rate');
+  const exchangeRateTxt = document.querySelector('.exchange-rate');
   let amountVal = amount.value;
   //default value is 1 if user don't enter any value or 0
   if (amountVal == '' || amountVal == '0') {
@@ -56,7 +66,7 @@ function getExchangeRate() {
     amountVal = 1;
   }
   exchangeRateTxt.innerText = 'Getting exchange rate...';
-  let url = `https://open.er-api.com/v6/latest/USD${fromCurrency.value}`;
+  let url = `https://open.er-api.com/v6/latest/${fromCurrency.value}`;
   //fetching api response
   fetch(url)
     .then((response) => response.json())
@@ -65,5 +75,8 @@ function getExchangeRate() {
       let totalExchangeRate = (amountVal * exchangeRate).toFixed(2);
       const exchangeRateTxt = document.querySelector('.exchange-rate');
       exchangeRateTxt.innerText = `${amountVal} ${fromCurrency.value} = ${totalExchangeRate} ${toCurrency.value}`;
+    })
+    .catch(() => {
+      exchangeRateTxt.innerText = 'Something went wrong';
     });
 }
