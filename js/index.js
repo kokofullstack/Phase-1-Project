@@ -19,9 +19,21 @@ for (let i = 0; i < dropList.length; i++) {
     // inserting option tag
     dropList[i].insertAdjacentHTML('beforeend', optionTag);
   }
-  // dropList[i].addEventListener('change', (e) => {
-  //   loadFlag(e.target);
-  // });
+  dropList[i].addEventListener('change', (e) => {
+    loadFlag(e.target);
+    //calling load flag
+  });
+}
+
+function loadFlag(element) {
+  for (code in countryCode) {
+    if (code == element.value) {
+      let imgTag = element.parentElement.querySelector('img');
+      // selecting flag img tag
+      imgTag.src = `https://flagsapi.com/${countryCode[code]}/shiny/64.png`;
+      //passing img from url
+    }
+  }
 }
 
 window.addEventListener('onload', () => {
