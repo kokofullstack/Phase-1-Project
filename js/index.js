@@ -87,7 +87,7 @@ function conversionHistory() {
   const exchangeRateTxt = document.querySelector('.exchange-rate');
   let p = document.createElement('p');
   let btn = document.createElement('button');
-  btn.addEventListener('click');
+  btn.addEventListener('click', handleDelete);
   btn.textContent = ' X ';
   p.textContent = `${exchangeRateTxt.innerText} `;
   p.appendChild(btn);
