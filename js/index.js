@@ -5,13 +5,13 @@ getButton = document.querySelector('form button');
 
 for (let i = 0; i < dropList.length; i++) {
   for (let currencyCode in countryCode) {
-    //selecting USD and MYR by default
+    //selecting USD and GBP by default
     let selected =
       i == 0
         ? currencyCode == 'USD'
           ? 'selected'
           : ''
-        : currencyCode == 'MMK'
+        : currencyCode == 'GBP'
         ? 'selected'
         : '';
     //creating currency code as a text and value
