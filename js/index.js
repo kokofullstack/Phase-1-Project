@@ -94,3 +94,8 @@ function conversionHistory() {
   console.log(p);
   document.querySelector('.wrapper').appendChild(p);
 }
+
+function handleDelete(e) {
+  e.target.parentNode.remove();
+}
+//remove the handle from conversionHistory
