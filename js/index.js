@@ -43,6 +43,7 @@ window.addEventListener('load', () => {
 getButton.addEventListener('click', (e) => {
   e.preventDefault();
   //preventing form from submitting
+  conversionHistory(); //test1
   getExchangeRate();
 });
 
@@ -79,4 +80,17 @@ function getExchangeRate() {
     .catch(() => {
       exchangeRateTxt.innerText = 'Something went wrong';
     });
+}
+
+function conversionHistory() {
+  //list the history of conversion
+  const exchangeRateTxt = document.querySelector('.exchange-rate');
+  let p = document.createElement('p');
+  let btn = document.createElement('button');
+  btn.addEventListener('click');
+  btn.textContent = ' X ';
+  p.textContent = `${exchangeRateTxt.innerText} `;
+  p.appendChild(btn);
+  console.log(p);
+  document.querySelector('.wrapper').appendChild(p);
 }
