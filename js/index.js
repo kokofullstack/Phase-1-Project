@@ -99,16 +99,33 @@ function handleDelete(e) {
   e.target.parentNode.remove();
 }
 //remove the handle from conversionHistory
+const dateInput = document.getElementById('dateInput');
+const resultContainer = document.getElementById('resultContainer');
+const result = document.getElementById('result');
+const lookupButton = document.getElementById('lookupButton');
 
-var lookupButton = document.getElementById('lookupButton');
-lookupButton.addEventListener('click', function(){
-//adding api code from their website
-var requestURL = 'https://api.exchangerate.host/' + dateInput.value;
+lookupButton.addEventListener('click', function () {
+  //adding api code from their website
+  var requestURL = 'https://api.exchangerate.host/' + dateInput.value;
   var request = new XMLHttpRequest();
   request.open('GET', requestURL);
   request.responseType = 'json';
   request.send();
 
-  request.onload = function() {
+  request.onload = function () {
     var response = request.response;
-  });
+
+    resultContainer.style.display = 'block';
+    if (response.success) {
+      let rates = response.rates;
+      let output = '<ul>';
+      for (const currency in rates) {
+        output += '<li>' + currency + '  :  ' + rates[currency] + '</li>';
+      }
+      output += '</ul>';
+      result.innerText = output;
+    } else {
+      result.innerText = 'Failed to retrieve currency data.';
+    }
+  };
+});
