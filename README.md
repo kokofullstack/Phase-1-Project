@@ -45,3 +45,6 @@ Contributions to the Currency Converter and Currency Historical Data Lookup App 
 Acknowledgments
 
 The Currency Converter and Currency Historical Data Lookup App makes use of various open-source libraries.
+
+Instruction Gif
+![](https://github.com/kokofullstack/phase-1-project/blob/main/app-gif.gif)
