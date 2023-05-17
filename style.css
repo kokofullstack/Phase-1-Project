@@ -27,8 +27,8 @@ body {
   border: none;
   border-radius: 5px;
   text-align: center;
+  background: #665ace;
   margin: auto;
-  background: #049475;
 }
 .wrapper form {
   margin: 40px 0 20px 0;
@@ -104,35 +104,48 @@ form button {
   cursor: pointer;
   background: #049475;
 }
-
-/*test*/
 label {
   font-weight: bold;
 }
-
 .lookup h3 {
-  height: 45px;
+  font-size: 20px;
+  font-weight: 500;
+  height: 28px;
   color: #fff;
-  font-size: 12px;
-  cursor: pointer;
-  background: #049475;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  margin: auto;
+  background: #665ace;
 }
 #dateInput {
-  margin-right: 10px;
+  margin-top: 20px;
+  height: 20px;
+  width: 100px;
   color: #fff;
   background: #049475;
+  border: none;
+  border-radius: 5px;
 }
 
 #lookupButton {
   margin-top: 20px;
+  height: 20px;
+  width: 60px;
   color: #fff;
   background: #049475;
+  border: none;
+  border-radius: 5px;
 }
 
 #resetButton {
   margin-top: 20px;
+  height: 20px;
+  width: 50px;
   color: #fff;
   background: #049475;
+  border: none;
+  border-radius: 5px;
 }
 
 #resultContainer {
