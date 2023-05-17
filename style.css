@@ -115,7 +115,15 @@ label {
 }
 
 #lookupButton {
-  margin-top: 10px;
+  margin-top: 20px;
+  color: #fff;
+  background: #049475;
+}
+
+#resetButton {
+  margin-top: 20px;
+  color: #fff;
+  background: #049475;
 }
 
 #resultContainer {
