@@ -110,8 +110,17 @@ label {
   font-weight: bold;
 }
 
+.lookup h3 {
+  height: 45px;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+  background: #049475;
+}
 #dateInput {
   margin-right: 10px;
+  color: #fff;
+  background: #049475;
 }
 
 #lookupButton {
