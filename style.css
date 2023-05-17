@@ -27,7 +27,7 @@ body {
   border: none;
   border-radius: 5px;
   text-align: center;
-  background: #665ace;
+  background: #719951;
   margin: auto;
 }
 .wrapper form {
@@ -116,7 +116,7 @@ label {
   border-radius: 5px;
   text-align: center;
   margin: auto;
-  background: #665ace;
+  background: #719951;
 }
 #dateInput {
   margin-top: 20px;
