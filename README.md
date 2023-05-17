@@ -5,12 +5,12 @@
 
 This is a Currency Converter and Currency Historical Data Lookup application that allows users to convert between different currencies and retrieve historical exchange rates. It is designed to provide a user-friendly interface and accurate currency conversion and historical data lookup functionality.
 
-##Features
+Features
 
 ##Currency Conversion:
 Users can easily convert between different currencies using latest exchange rates. The application retrieves the latest exchange rates from a reliable data source to ensure accuracy.
 
-##Historical Data Lookup:
+Historical Data Lookup:
 
 Users can access historical exchange rate data for specific dates. This feature allows users to track currency fluctuations over time and analyze historical trends.
 
