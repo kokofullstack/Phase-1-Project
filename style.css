@@ -104,3 +104,23 @@ form button {
   cursor: pointer;
   background: #049475;
 }
+
+/*test*/
+label {
+  font-weight: bold;
+}
+
+#dateInput {
+  margin-right: 10px;
+}
+
+#lookupButton {
+  margin-top: 10px;
+}
+
+#resultContainer {
+  margin-top: 20px;
+  border: 1px solid #fcfcfc;
+  padding: 10px;
+  background-color: #fff;
+}

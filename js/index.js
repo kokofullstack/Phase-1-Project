@@ -92,7 +92,7 @@ function conversionHistory() {
   p.textContent = `${exchangeRateTxt.innerText} `;
   p.appendChild(btn);
   console.log(p);
-  document.querySelector('.wrapper').appendChild(p);
+  document.querySelector('.history').appendChild(p);
 }
 
 function handleDelete(e) {
