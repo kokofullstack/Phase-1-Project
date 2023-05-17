@@ -120,12 +120,18 @@ lookupButton.addEventListener('click', function () {
       let rates = response.rates;
       let output = '<ul>';
       for (const currency in rates) {
-        output += '<li>' + currency + '  :  ' + rates[currency] + '</li>';
+        output += '<li>' + currency + ' :  ' + rates[currency] + '</li>';
       }
       output += '</ul>';
-      result.innerText = output;
+      result.innerHTML = output;
     } else {
-      result.innerText = 'Failed to retrieve currency data.';
+      result.innerHTML = 'Failed to retrieve currency data.';
     }
   };
+});
+//reset the lookup table
+resetButton.addEventListener('click', function () {
+  dateInput.value = '';
+  resultContainer.style.display = 'none';
+  result.innerText = '';
 });
