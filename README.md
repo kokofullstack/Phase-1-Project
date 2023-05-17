@@ -1,6 +1,6 @@
 # Phase-1-Project
 
-**_Phase 1 Project_**
+
 **_Currency Converter and Currency Historical Data Lookup App_**
 
 This is a Currency Converter and Currency Historical Data Lookup application that allows users to convert between different currencies and retrieve historical exchange rates. It is designed to provide a user-friendly interface and accurate currency conversion and historical data lookup functionality.
