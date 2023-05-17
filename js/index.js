@@ -99,3 +99,14 @@ function handleDelete(e) {
   e.target.parentNode.remove();
 }
 //remove the handle from conversionHistory
+
+
+//adding api code from their website
+var requestURL = 'https://api.exchangerate.host/' + dateInput.value;
+  var request = new XMLHttpRequest();
+  request.open('GET', requestURL);
+  request.responseType = 'json';
+  request.send();
+
+  request.onload = function() {
+    var response = request.response;
