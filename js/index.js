@@ -100,7 +100,8 @@ function handleDelete(e) {
 }
 //remove the handle from conversionHistory
 
-
+var lookupButton = document.getElementById('lookupButton');
+lookupButton.addEventListener('click', function(){
 //adding api code from their website
 var requestURL = 'https://api.exchangerate.host/' + dateInput.value;
   var request = new XMLHttpRequest();
@@ -110,3 +111,4 @@ var requestURL = 'https://api.exchangerate.host/' + dateInput.value;
 
   request.onload = function() {
     var response = request.response;
+  });
